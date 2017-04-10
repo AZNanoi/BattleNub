@@ -1,0 +1,366 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+  max-width: 100%;
+  height: 100%;
+}
+body {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+  font-weight: 300;
+  line-height: 1.4em;
+  background: #fff;
+  background-size: cover;
+  color: black;
+  font-size: 1.2em;
+  text-align:center;
+}
+
+a {
+  color: #E24329;
+}
+header {
+  text-align:center;
+  font-size: 36px auto;
+  position: relative;
+  margin: 1em auto;
+  z-index: -1;
+}
+
+
+header .logo{
+  display: block;
+  width: 170px;
+  height: 150px;
+  opacity: 0.7;
+  margin: 1em auto;
+}
+
+input[type=button], button, a.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+  box-shadow:inset 0px 1px 0px 0px #f29c93;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+  background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+  background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+  background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+  background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+  background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+  background-color:#fe1a00;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #d83526;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:1em;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
+  padding: .7em 1em;
+  margin-bottom: 1em;
+  text-align:center;
+
+}
+input[type=button]:hover, button:hover, a.button:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+  background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+  background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+  background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+  background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+  background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+  background-color:#ce0100;
+}
+
+
+input[type=button]:disabled, button:disabled, a.button:disabled {
+-moz-box-shadow:inset 0px 1px 0px 0px #91b8b3;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #91b8b3;
+  box-shadow:inset 0px 1px 0px 0px #91b8b3;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a0a3a2), color-stop(1, #6c7c7c));
+  background:-moz-linear-gradient(top, #a0a3a2 5%, #6c7c7c 100%);
+  background:-webkit-linear-gradient(top, #a0a3a2 5%, #6c7c7c 100%);
+  background:-o-linear-gradient(top, #a0a3a2 5%, #6c7c7c 100%);
+  background:-ms-linear-gradient(top, #a0a3a2 5%, #6c7c7c 100%);
+  background:linear-gradient(to bottom, #a0a3a2 5%, #6c7c7c 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a0a3a2', endColorstr='#6c7c7c',GradientType=0);
+  background-color:#a0a3a2;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #566963;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2b665e;
+  padding: .7em 1em;
+  margin-bottom: 1em;
+}
+}
+input[type=check] {
+  margin-right: 1em;
+}
+
+input[type=text]{
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  font-size:20px;
+  width:100px;
+}
+input{
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+}
+
+.subdue {
+  color: #787878;
+}
+ol#moves {
+    counter-reset: item;
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+ol#moves li:before {
+    content: 'Move #' counter(item) '. ';
+    counter-increment: item;
+}
+
+#whosTurn {
+  color: #E24329;
+}
+#pubsub span {
+  color: #E24329;
+}
+#pubsub code {
+  font-size: 1.8em;
+  line-height: 2em;
+}
+#presence em {
+  color: #FC6D26;
+}
+#presenceConsole {
+  position: relative;
+  padding: 2.5em 2em 1.5em;
+  background: #645252 url(../images/console-header.png) top left no-repeat;
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  min-height: 100px;
+}
+#presenceConsole:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 25px;
+  background: #E2E2E2;
+  background-image: url(../images/console-header.png);
+  background-image: url(../images/console-header.png), linear-gradient(to bottom, #ebebeb, #d5d5d5);
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #5B5B5B;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#presenceConsole:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Presence Console";
+  padding-left: 75px;
+  font-family: sans-serif; 
+  color: #5b5b5b;
+  font-size: 0.75em;
+}
+.presence {
+  position: relative;
+  min-width: 80px;
+  height: 80px;
+  padding: .5em;
+  margin: 20px 0 20px 50px;
+  display: inline-block;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  background: #B0AEA9;
+}
+.presence:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 28px;
+  border: 0;
+  border-right-width: 20px;
+  border-bottom-width: 15px;
+  border-style: solid;
+  border-color: transparent #B0AEA9;
+  display: block;
+  width: 0;
+}
+.presence strong {
+  font-size: 2.2rem;
+  line-height: 2.3rem;
+}
+.presence span {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.presence.two {
+  background: #EFBD19;
+}
+.presence.two:after {
+  border-color: transparent #EFBD19;
+}
+
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://github.com/pubnub/auth-chat-demo/blob/master/public/fonts/fontawesome-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+header .fa {
+  position: absolute;
+  right: 18px;
+  top: 9px;
+  font-size: 2em;
+}
+table{
+	width:99vw;
+	height:99vw;
+	overflow:hidden;
+	background-image: url('../images/bg-ocean.png');
+    background-size: auto 100%;
+}
+table td {
+  min-width:8.5vw;
+  max-width:8.5vw;
+  min-height:8.5vw;
+  max-height:8.5vw;
+  background-size:8.5vw 8.5vw;
+  font-size:7vw;
+  font-weight:800;
+  position: relative;
+  z-index: 3;
+}
+table td img{
+  width: 10vw;
+  height: 9vw;
+  z-index: 2;
+  position: absolute;
+  margin-left: -5vw;
+  margin-top: -5vw;
+}
+#startShips{
+	height: 100vw;
+}
+#popup{
+	display:none;
+}
+.backButton{
+  margin-left:1vw;
+  position:absolute;
+  margin-top: -3vw;
+  width:13vw;
+  text-align: left;
+}
+.backButton img{
+  cursor: pointer;
+}
+
+div.shipButton{
+  display: inline-block;
+  background-repeat:no-repeat;
+  min-width:10vw;
+}
+#\35 a{
+ 
+  background-size: 10vw 50vw; 
+  min-height: 50vw; 
+  background-image:url('../images/5a-v.png');
+}
+#\34 a{
+  background-size: 10vw 40vw; 
+  min-height: 40vw; 
+  background-image:url('../images/4a-v.png');
+}
+#\33 a{
+  background-size: 10vw 30vw; 
+  min-height: 30vw; 
+  background-image:url('../images/3a-v.png');
+}
+#\33 b{
+  background-size: 10vw 30vw; 
+  min-height: 30vw; 
+  background-image:url('../images/3b-v.png');
+}
+#\32 a{
+  background-size: 10vw 20vw; 
+  min-height: 20vw; 
+  background-image:url('../images/2a-v.png');
+}
+#shipButtons{
+  overflow: hidden;
+  width: 100vw;
+}
+#startingShips{
+  width: 100vw;
+  margin-top:15px;
+}
+#instructions{
+  text-align: left;
+  margin-left:20%;
+  width:60vw;
+}
+#IdInput{
+  min-height:48px
+}
+#plain_page{
+  overflow:hidden;
+  position:absolute;
+}
+#infobox{
+  width: 100vw;
+}
+#board_container{
+  width: 100vw;
+  color:white;
+}
+#audioE_button, #audioS_b{
+  z-index: -100; 
+  position: fixed;
+}
+.homeButton{
+  width: 24vw;
+  float: right;
+  padding-right:12vw;
+  margin-top: -4vw;
+  margin-right: -12vw;
+  position:relative;
+  text-align: right;
+  cursor: pointer;
+}
